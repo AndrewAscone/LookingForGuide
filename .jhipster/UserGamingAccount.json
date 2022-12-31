@@ -1,0 +1,31 @@
+{
+  "applications": "*",
+  "changelogDate": "20221223231518",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "user_gaming_account",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "accountName",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "UserGamingAccount",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "login",
+      "otherEntityName": "user",
+      "relationshipName": "user",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

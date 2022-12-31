@@ -1,0 +1,59 @@
+{
+  "applications": "*",
+  "changelogDate": "20221223231517",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "post",
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "postBody",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "guideType",
+      "fieldType": "GuideType",
+      "fieldValues": "TUTORIAL (Tutorial),RAID (Raid)"
+    },
+    {
+      "fieldName": "image",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    },
+    {
+      "fieldName": "userType",
+      "fieldType": "UserType",
+      "fieldValues": "MENTEE (Student),MENTOR (Guide)"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Post",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "activity",
+      "ownerSide": true,
+      "relationshipName": "activity",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityField": "login",
+      "otherEntityName": "user",
+      "relationshipName": "user",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

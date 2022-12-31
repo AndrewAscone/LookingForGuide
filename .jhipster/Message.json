@@ -1,0 +1,27 @@
+{
+  "applications": "*",
+  "changelogDate": "20221223231521",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "message",
+  "fields": [
+    {
+      "fieldName": "messageBody",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Message",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "messageBox",
+      "otherEntityRelationshipName": "message",
+      "relationshipName": "messageBox",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}
