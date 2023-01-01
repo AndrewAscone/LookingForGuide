@@ -1,6 +1,5 @@
 package rocks.zipcode.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.io.Serializable;
 import java.time.ZonedDateTime;
 import javax.persistence.*;
@@ -210,34 +209,18 @@ public class Post implements Serializable {
         return getClass().hashCode();
     }
 
+    // prettier-ignore
     @Override
     public String toString() {
-        return (
-            "Post{" +
-            "id=" +
-            getId() +
-            ", title='" +
-            getTitle() +
-            "'" +
-            ", postBody='" +
-            getPostBody() +
-            "'" +
-            ", date='" +
-            getDate() +
-            "'" +
-            ", guideType='" +
-            getGuideType() +
-            "'" +
-            ", image='" +
-            getImage() +
-            "'" +
-            ", imageContentType='" +
-            getImageContentType() +
-            "'" +
-            ", userType='" +
-            getUserType() +
-            "'" +
-            "}"
-        );
+        return "Post{" +
+            "id=" + getId() +
+            ", title='" + getTitle() + "'" +
+            ", postBody='" + getPostBody() + "'" +
+            ", date='" + getDate() + "'" +
+            ", guideType='" + getGuideType() + "'" +
+            ", image='" + getImage() + "'" +
+            ", imageContentType='" + getImageContentType() + "'" +
+            ", userType='" + getUserType() + "'" +
+            "}";
     }
 }

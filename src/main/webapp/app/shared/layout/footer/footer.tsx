@@ -10,10 +10,10 @@ const Footer = () => (
       <Col md="12">
         <h6>About the developer</h6>
         <p>
-          <a href="https://github.com/AndrewAscone" target="_blank">
+          <a href="https://github.com/AndrewAscone" target="_blank" style={{ color: 'white' }}>
             Github
           </a>{' '}
-          <a href="https://www.linkedin.com/in/andrew-ascone/" target="_blank">
+          <a href="https://www.linkedin.com/in/andrew-ascone/" target="_blank" style={{ color: 'white' }}>
             LinkedIn
           </a>
         </p>

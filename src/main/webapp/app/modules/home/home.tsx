@@ -16,15 +16,42 @@ export const Home = () => {
         <span className="hipster rounded" />
       </Col>
       <Col md="9">
-        <h2>Welcome to Looking For Guide!</h2>
-        <p className="lead">This is your homepage</p>
+        {/* <h2>Welcome to Looking For Guide!</h2> */}
+        {/* <p className="lead">This is your homepage</p> */}
         {account?.login ? (
           <div>
-            <Alert color="success">You are logged in as user &quot;{account.login}&quot;.</Alert>
+            {/* <Alert color="success">You are logged in as user &quot;{account.login}&quot;.</Alert> */}
             <Link to="/post">
-              <button type="button">Looking For Guide</button>
+              <button
+                type="button"
+                style={{
+                  borderRadius: '3px',
+                  paddingLeft: '2em',
+                  paddingRight: '2em',
+                  color: '#ffffff',
+                  background: '#5f5757',
+                  fontFamily: 'nasalization',
+                  fontSize: '1.5em',
+                }}
+              >
+                Looking For Guide
+              </button>
             </Link>
-            <button>Looking To Guide</button>
+            <br></br>
+            <br></br>
+            <button
+              style={{
+                borderRadius: '3px',
+                paddingLeft: '2em',
+                paddingRight: '2.5em',
+                color: '#ffffff',
+                background: '#5f5757',
+                fontFamily: 'nasalization',
+                fontSize: '1.5em',
+              }}
+            >
+              Looking To Guide
+            </button>
           </div>
         ) : (
           <div>

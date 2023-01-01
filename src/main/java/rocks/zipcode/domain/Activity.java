@@ -1,9 +1,6 @@
 package rocks.zipcode.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
 import javax.persistence.*;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
@@ -90,8 +87,13 @@ public class Activity implements Serializable {
         return getClass().hashCode();
     }
 
+    // prettier-ignore
     @Override
     public String toString() {
-        return "Activity{" + "id=" + getId() + ", name='" + getName() + "'" + ", ordinal=" + getOrdinal() + "}";
+        return "Activity{" +
+            "id=" + getId() +
+            ", name='" + getName() + "'" +
+            ", ordinal=" + getOrdinal() +
+            "}";
     }
 }
