@@ -47,14 +47,14 @@ export const Post = () => {
             <thead>
               <tr>
                 {/* <th>ID</th> */}
-                <th>Title</th>
+                <th style={{ color: 'white' }}>Title</th>
                 {/* <th>Post Body</th> */}
                 {/* <th>Date</th> */}
                 {/* <th>Guide Type</th> */}
-                <th>Emblem</th>
+                <th style={{ color: 'white' }}>Emblem</th>
                 {/* <th>User Type</th> */}
                 {/* <th>Activity</th> */}
-                <th>User</th>
+                <th style={{ color: 'white' }}>User</th>
                 <th />
               </tr>
             </thead>
@@ -94,7 +94,7 @@ export const Post = () => {
                   </td>
                   {/* <td>{post.userType}</td> */}
                   {/* <td>{post.activity ? <Link to={`/activity/${post.activity.id}`}>{post.activity.name}</Link> : ''}</td> */}
-                  <td style={{ color: 'black' }}>{post.user ? post.user.login : ''}</td>
+                  <td style={{ color: 'white' }}>{post.user ? post.user.login : ''}</td>
                   <td className="text-end">
                     {/* <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`/post/${post.id}`} color="info" size="sm" data-cy="entityDetailsButton">
