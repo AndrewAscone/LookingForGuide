@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Button, Row, Col } from 'reactstrap';
-import { openFile, byteSize, TextFormat } from 'react-jhipster';
+import { TextFormat, byteSize, openFile } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { APP_DATE_FORMAT, APP_LOCAL_DATE_FORMAT } from 'app/config/constants';
+import { APP_DATE_FORMAT } from 'app/config/constants';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
 import { getEntity } from './post.reducer';
@@ -21,7 +21,7 @@ export const PostDetail = () => {
   const postEntity = useAppSelector(state => state.post.entity);
   return (
     <Row>
-      <Col md="8">
+      <Col md="8" style={{ color: 'white' }}>
         {/* <h2 data-cy="postDetailsHeading">Post</h2> */}
         <dl className="jh-entity-details">
           {/* <dt>
@@ -33,7 +33,20 @@ export const PostDetail = () => {
           </dt> */}
           <dd style={{ fontSize: '1.4em' }}>{postEntity.title}</dd>
           <dt>Posted By</dt>
-          <dd>{postEntity.user ? postEntity.user.login : ''}</dd>
+          <dd>
+            <a href="https://www.bungie.net/7/en/User/Profile/1/4611686018436344035" target={'_blank'} style={{ textDecoration: 'none' }}>
+              {postEntity.user ? postEntity.user.login : ''}
+            </a>
+          </dd>
+          <dd>
+            {postEntity.image ? (
+              <div>
+                {postEntity.imageContentType ? (
+                  <img src={`data:${postEntity.imageContentType};base64,${postEntity.image}`} style={{ maxHeight: '300px' }} />
+                ) : null}
+              </div>
+            ) : null}
+          </dd>
           <dt>
             <span id="postBody">Details</span>
           </dt>
@@ -49,20 +62,7 @@ export const PostDetail = () => {
           {/* <dt>
             <span id="image">Image</span>
           </dt> */}
-          <dd>
-            {postEntity.image ? (
-              <div>
-                {/* {postEntity.imageContentType ? (
-                  <a onClick={openFile(postEntity.imageContentType, postEntity.image)}>
-                    <img src={`data:${postEntity.imageContentType};base64,${postEntity.image}`} style={{ maxHeight: '300px' }} />
-                  </a> */}
-                {/* ) : null} */}
-                {/* <span>
-                  {postEntity.imageContentType}, {byteSize(postEntity.image)}
-                </span> */}
-              </div>
-            ) : null}
-          </dd>
+
           {/* <dt>
             <span id="userType">User Type</span>
           </dt>
@@ -70,7 +70,7 @@ export const PostDetail = () => {
           <dt>Activity</dt>
           <dd>{postEntity.activity ? postEntity.activity.name : ''}</dd>
         </dl>
-        <Button tag={Link} to="/post" replace color="grey" data-cy="entityDetailsBackButton">
+        <Button tag={Link} to="/post" replace color="dark" data-cy="entityDetailsBackButton">
           <FontAwesomeIcon icon="arrow-left" /> <span className="d-none d-md-inline">Back</span>
         </Button>
         &nbsp;

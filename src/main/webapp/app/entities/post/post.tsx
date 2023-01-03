@@ -29,10 +29,10 @@ export const Post = () => {
 
   return (
     <div>
-      <h2 id="post-heading" data-cy="PostHeading">
+      <h2 id="post-heading" data-cy="PostHeading" style={{ color: 'white' }}>
         Posts
         <div className="d-flex justify-content-end">
-          <Button className="me-2" color="info" onClick={handleSyncList} disabled={loading}>
+          <Button className="me-2" color="dark" onClick={handleSyncList} disabled={loading}>
             <FontAwesomeIcon icon="sync" spin={loading} /> Refresh list
           </Button>
           <Link to="/post/new" className="btn btn-primary jh-create-entity" id="jh-create-entity" data-cy="entityCreateButton">
@@ -78,7 +78,11 @@ export const Post = () => {
                     {post.image ? (
                       <div>
                         {post.imageContentType ? (
-                          <a onClick={openFile(post.imageContentType, post.image)}>
+                          <a
+                            href="https://www.bungie.net/7/en/User/Profile/1/4611686018436344035"
+                            target={'_blank'}
+                            style={{ textDecoration: 'none' }}
+                          >
                             <img
                               src={`data:${post.imageContentType};base64,${post.image}`}
                               style={{ maxHeight: '30px', borderRadius: '50%' }}

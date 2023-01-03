@@ -19,7 +19,7 @@ export const Home = () => {
         {/* <h2>Welcome to Looking For Guide!</h2> */}
         {/* <p className="lead">This is your homepage</p> */}
         {account?.login ? (
-          <div>
+          <div style={{ display: 'flexwrap' }}>
             {/* <Alert color="success">You are logged in as user &quot;{account.login}&quot;.</Alert> */}
             <Link to="/post">
               <button
@@ -32,22 +32,27 @@ export const Home = () => {
                   background: '#5f5757',
                   fontFamily: 'nasalization',
                   fontSize: '1.5em',
+                  marginTop: '0px',
+                  marginLeft: '20px',
                 }}
               >
                 Looking For Guide
               </button>
             </Link>
             <br></br>
+            <p>&nbsp;</p>
             <br></br>
             <button
               style={{
                 borderRadius: '3px',
                 paddingLeft: '2em',
-                paddingRight: '2.5em',
+                paddingRight: '2.6em',
                 color: '#ffffff',
                 background: '#5f5757',
                 fontFamily: 'nasalization',
                 fontSize: '1.5em',
+                marginLeft: '20px',
+                marginBottom: '40px',
               }}
             >
               Looking To Guide
