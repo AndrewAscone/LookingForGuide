@@ -32,8 +32,12 @@ export const Post = () => {
       <h2 id="post-heading" data-cy="PostHeading" style={{ color: 'white' }}>
         Posts
         <div className="d-flex justify-content-end">
+          <Button tag={Link} to="/" replace color="dark" data-cy="entityDetailsBackButton">
+            <FontAwesomeIcon icon="arrow-left" /> <span className="d-none d-md-inline">Back</span> Home
+          </Button>
+          &nbsp;
           <Button className="me-2" color="dark" onClick={handleSyncList} disabled={loading}>
-            <FontAwesomeIcon icon="sync" spin={loading} /> Refresh list
+            <FontAwesomeIcon icon="sync" spin={loading} /> Refresh
           </Button>
           <Link to="/post/new" className="btn btn-primary jh-create-entity" id="jh-create-entity" data-cy="entityCreateButton">
             <FontAwesomeIcon icon="plus" />
